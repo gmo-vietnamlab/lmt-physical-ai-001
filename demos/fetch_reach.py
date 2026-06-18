@@ -76,7 +76,7 @@ def train_fetch_reach():
 
     print("Training 20k steps...")
     t0 = time_module.time()
-    model.learn(total_timesteps=20_000)
+    model.learn(total_timesteps=20_000, progress_bar=True)
     elapsed = time_module.time() - t0
     print(f"Done in {elapsed:.0f}s")
 

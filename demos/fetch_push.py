@@ -174,7 +174,7 @@ def train_push_her(steps=50_000):
 
     print(f"Training {steps:,} steps...")
     t0 = time_module.time()
-    model.learn(total_timesteps=steps, reset_num_timesteps=False)
+    model.learn(total_timesteps=steps, reset_num_timesteps=False, progress_bar=True)
     elapsed = time_module.time() - t0
     print(f"Training done in {elapsed:.0f}s ({steps / elapsed:.0f} steps/s)")
 
